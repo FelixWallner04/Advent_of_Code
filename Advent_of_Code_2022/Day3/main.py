@@ -2,20 +2,20 @@ import csv
 reader = csv.reader(open("day3.txt", "r"))
 
 # List and Variables
-list = []
+input = []
 listTest = [['vJrwpWtwJgWrhcsFMMfFFhFp'], ['jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL'], ['PmmdzqPrVvPwwTWBwg'], ['wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn'], ['ttgJtRGJQctTZtZT'], ['CrZsJsPPZsGzwwsLwLmpwMDw']]
-splitList = []
+splitInput = []
 rucksack1 = []
 rucksack2 = []
-sumList = []
+sumInput = []
 listBadge = []
 index = 0
-str = 0
-bool = False
 i = 0
+j = ''
 scr = 0
 
-# Function:
+# Function: to identify the Score of the single chars
+# can also be done with array and index() but did not know it at the time
 def switch(value):
     scr = 0
     if(value == 'a'):
@@ -127,17 +127,17 @@ def switch(value):
 # the rows of day3.txt file are stored in list
 # Format [['A']] -> list in list
 for row in reader:
-    list.append(row)
+    input.append(row)
 #print(list)
 
 
 # Part 1:
 # Loop to split the string in the middle
 # outcome are two list
-for str in list:
-    index = int(len(str[0]) / 2)
-    rucksack1.append(str[0][:index])
-    rucksack2.append(str[0][index:])
+for i in input:
+    index = int(len(i[0]) / 2)
+    rucksack1.append(i[0][:index])
+    rucksack2.append(i[0][index:])
 #print("Rucksack 1: ", rucksack1)
 #print("Rucksack 2: ", rucksack2)
 
@@ -145,34 +145,33 @@ for str in list:
 #str = "p" in rucksack1[0]
 #print(str)
 index = 0
-for str in rucksack1:
-    for chr in str:
-        bool = chr in rucksack2[i]
-        if(bool):
-            sumList.append(chr)
+for i in rucksack1:
+    for j in i:
+        boolContain = j in rucksack2[index]
+        if boolContain:
+            sumInput.append(j)
             break
-    i += 1
-#print(sum)
+    index += 1
 
 # loop through sum and return score
-for elm in sumList:
+for elm in sumInput:
     scr = scr + switch(elm)
-print( "Part1: Score",scr)
+print( "Part1: Score", scr)
 
 
 # Part 2:
 scr = 0
-# loop through the strings and looks for same letter
+# loop through 3 strings and looks for same letter
 # store same char in listBadge
-for i in range(0, len(list), 3):
-    for chr1 in list[i][0]:
-        bool1 = chr1 in list[i+1][0]
-        bool2 = chr1 in list[i+2][0]
-        if(bool1 and bool2):
-            listBadge.append(chr1)
+for i in range(0, len(input), 3):
+    for j in input[i][0]:
+        bool1 = j in input[i+1][0]
+        bool2 = j in input[i+2][0]
+        if bool1 and bool2:
+            listBadge.append(j)
             break
 
 # print score
 for elm in listBadge:
     scr = scr + switch(elm)
-print("Part2: Score",scr)
+print("Part2: Score", scr)

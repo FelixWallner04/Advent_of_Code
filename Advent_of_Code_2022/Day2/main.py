@@ -21,10 +21,10 @@ for row in reader:
     list.append(row)
 print(list)
 
-# pop the last element, because it is a empty element
+# pop the last element, because it is an empty element
 list.pop(-1)
 
-# String split
+# split string elements of list
 for elm in list:
     splitList.append(elm[0].split())
 print(splitList)
@@ -76,7 +76,7 @@ def winnerPart1(value1, value2):
     valueP = 0
     return sum
 
-# Function - Part 2: which looks wheter you have to lose - draw - win
+# Function - Part 2: which looks whether you have to lose - draw - win
 # X - lose  |   Y - draw    |   Z - win
 # X - Rock - 1 P |   Y - Paper - 2 P  |   Z - Scissors - 3 P
 # 0 - lost  |   3 P - draw    |   6 P - won
@@ -127,7 +127,9 @@ def winnerPart2(value1, value2):
 for elm in splitList:
     sumPart1 = sumPart1 + winnerPart1(elm[0], elm[1])
     sumPart2 = sumPart2 + winnerPart2(elm[0], elm[1])
-print(sumPart1)
-print(sumPart2)
 
-# Tag 2
+# Solution Part 1
+print(sumPart1)
+
+# Solution Part 2
+print(sumPart2)
