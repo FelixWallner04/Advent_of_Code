@@ -1,6 +1,6 @@
 import csv
 # reading in the date
-reader = csv.reader(open("day2.txt", "r"))
+reader = csv.reader(open("day2_input.txt", "r"))
 
 # List and Variablen
 list = []
@@ -19,7 +19,7 @@ i = 0
 # Format [['A']] -> list in list
 for row in reader:
     list.append(row)
-print(list)
+#print(list)
 
 # pop the last element, because it is an empty element
 list.pop(-1)
@@ -27,7 +27,7 @@ list.pop(-1)
 # split string elements of list
 for elm in list:
     splitList.append(elm[0].split())
-print(splitList)
+#print(splitList)
 
 # Function - Part1: which looks whether you have won - drawn - lost
 # A - Rock  |   B - Paper   |   C - Scissors
@@ -129,7 +129,7 @@ for elm in splitList:
     sumPart2 = sumPart2 + winnerPart2(elm[0], elm[1])
 
 # Solution Part 1
-print(sumPart1)
+print("Solution Part1:",sumPart1)
 
 # Solution Part 2
-print(sumPart2)
+print("Solution Part2",sumPart2)

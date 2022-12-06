@@ -1,5 +1,5 @@
 import csv
-reader = csv.reader(open("day3.txt", "r"))
+reader = csv.reader(open("day3_input.txt", "r"))
 
 # List and Variables
 input = []
