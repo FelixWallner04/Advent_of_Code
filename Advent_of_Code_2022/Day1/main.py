@@ -19,7 +19,6 @@ for elm in list:
     if elm == 0:
         sum.append(sol)
         sol = 0
-
 print("Part1: MaxValue",max(sum))
 
 # Tag 2
