@@ -1,5 +1,4 @@
 import csv
-
 reader = csv.reader(open("day4_input.txt", "r"))
 
 # list and Variables
