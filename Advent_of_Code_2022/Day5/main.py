@@ -1,8 +1,9 @@
+import copy
 import csv
 reader = csv.reader(open("day5_input.txt", "r"))
 
 # List and Variables
-stack1 = [
+S = [
     [],
     ['Q', 'M', 'G', 'C', 'L'],
     ['R', 'D', 'L', 'C', 'T', 'F', 'H', 'G'],
@@ -14,18 +15,8 @@ stack1 = [
     ['G', 'S', 'J', 'V', 'Z', 'N', 'H', 'P'],
     ['Z', 'F', 'H', 'G']
 ]
-stack2 = [
-    [],
-    ['Q', 'M', 'G', 'C', 'L'],
-    ['R', 'D', 'L', 'C', 'T', 'F', 'H', 'G'],
-    ['V', 'J', 'F', 'N', 'M', 'T', 'W', 'R'],
-    ['J', 'F', 'D', 'V', 'Q', 'P'],
-    ['N', 'F', 'M', 'S', 'L', 'B', 'T'],
-    ['R', 'N', 'V', 'H', 'C', 'D', 'P'],
-    ['H', 'C', 'T'],
-    ['G', 'S', 'J', 'V', 'Z', 'N', 'H', 'P'],
-    ['Z', 'F', 'H', 'G']
-]
+stack1 = copy.deepcopy(S)
+stack2 = copy.deepcopy(S)
 inputPuzzle = []
 inputSplit = []
 sol1, sol2 = [], []
