@@ -7,10 +7,10 @@ sum = []
 rowInt = 0
 sol = 0
 
-for row in reader:
-    if len(row) == 0:
-       row.append(0)
-    rowInt = int(row[0])
+for line in reader:
+    if len(line) == 0:
+       line.append(0)
+    rowInt = int(line[0])
     list.append(rowInt)
 
 # loop through list and add

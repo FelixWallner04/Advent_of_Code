@@ -17,8 +17,8 @@ i = 0
 
 # the rows of day2.txt file are stored in list
 # Format [['A']] -> list in list
-for row in reader:
-    list.append(row)
+for line in reader:
+    list.append(line)
 #print(list)
 
 # pop the last element, because it is an empty element

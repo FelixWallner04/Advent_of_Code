@@ -9,8 +9,8 @@ splitInput = []
 p1 = 0
 p2 = 0
 
-for row in reader:
-    inputDay4.append(row)
+for line in reader:
+    inputDay4.append(line)
 #print(inputDay4)
 
 for elm in inputDay4:

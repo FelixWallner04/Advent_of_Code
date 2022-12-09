@@ -126,8 +126,8 @@ def switch(value):
 
 # the rows of day3.txt file are stored in list
 # Format [['A']] -> list in list
-for row in reader:
-    input.append(row)
+for line in reader:
+    input.append(line)
 #print(list)
 
 
