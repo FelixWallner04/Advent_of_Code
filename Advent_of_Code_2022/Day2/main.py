@@ -29,6 +29,7 @@ for elm in list:
     splitList.append(elm[0].split())
 #print(splitList)
 
+
 # Function - Part1: which looks whether you have won - drawn - lost
 # A - Rock  |   B - Paper   |   C - Scissors
 # X - Rock - 1 P  |   Y - Paper - 2 P   |   Z - Scissors - 3 P
@@ -75,6 +76,7 @@ def winnerPart1(value1, value2):
     valueR = 0
     valueP = 0
     return sum
+
 
 # Function - Part 2: which looks whether you have to lose - draw - win
 # X - lose  |   Y - draw    |   Z - win
