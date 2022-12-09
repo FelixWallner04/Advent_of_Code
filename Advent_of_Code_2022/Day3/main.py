@@ -175,3 +175,5 @@ for i in range(0, len(input), 3):
 for elm in listBadge:
     scr = scr + switch(elm)
 print("Part2: Score", scr)
+
+
